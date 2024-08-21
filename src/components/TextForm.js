@@ -49,7 +49,7 @@ export default function TextForm(props) {
       <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={handleCopy}>Copy Text</button>
 <div className="mt-4">
     <h2 >Your Text Summary</h2>
-    <p>you text contains {text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
+    <p>you text contains {text.split(/\s+/).filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
     <h3>preview</h3>
     <p>{text===''?'write some text':text}</p>
 </div>
